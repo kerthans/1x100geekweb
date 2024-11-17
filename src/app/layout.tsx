@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import MouseEffect from '@/components/MouseEffect'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +19,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-space-900 text-white`}>
+        <MouseEffect />
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-grow">
