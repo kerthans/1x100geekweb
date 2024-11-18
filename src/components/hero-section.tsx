@@ -1,15 +1,9 @@
-'use client';
+'use client'
 
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { 
-  Terminal, 
-  Code2, 
-  Laptop,
-  ArrowRight,
-  Sparkles,
-} from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
+import { motion } from 'framer-motion'
+import { Button } from '@/components/ui/button'
+import { Terminal, Code2, Laptop, ArrowRight, Sparkles } from 'lucide-react'
+import { Badge } from '@/components/ui/badge'
 
 export function HeroSection() {
   return (
@@ -54,8 +48,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            在这里，我们共同学习、分享、成长。
-            加入极客俱乐部，开启你的技术之旅。
+            在这里，我们共同学习、分享、成长。 加入极客俱乐部，开启你的技术之旅。
           </motion.p>
 
           <motion.div
@@ -82,27 +75,21 @@ export function HeroSection() {
             <div className="glass-morphism rounded-xl p-6 hover-card-animation">
               <Terminal className="h-8 w-8 mb-4 text-indigo-500" />
               <h3 className="text-lg font-semibold mb-2">开发者优先</h3>
-              <p className="text-muted-foreground">
-                以开发者体验为核心，提供最佳实践
-              </p>
+              <p className="text-muted-foreground">以开发者体验为核心，提供最佳实践</p>
             </div>
             <div className="glass-morphism rounded-xl p-6 hover-card-animation">
               <Code2 className="h-8 w-8 mb-4 text-blue-500" />
               <h3 className="text-lg font-semibold mb-2">技术驱动</h3>
-              <p className="text-muted-foreground">
-                紧跟技术前沿，深度技术分享
-              </p>
+              <p className="text-muted-foreground">紧跟技术前沿，深度技术分享</p>
             </div>
             <div className="glass-morphism rounded-xl p-6 hover-card-animation">
               <Laptop className="h-8 w-8 mb-4 text-purple-500" />
               <h3 className="text-lg font-semibold mb-2">实践导向</h3>
-              <p className="text-muted-foreground">
-                注重实战项目，加速成长进阶
-              </p>
+              <p className="text-muted-foreground">注重实战项目，加速成长进阶</p>
             </div>
           </motion.div>
         </div>
       </div>
     </section>
-  );
+  )
 }

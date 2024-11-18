@@ -1,19 +1,11 @@
-'use client';
+'use client'
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { 
-  Github, 
-  Twitter, 
-  Linkedin,
-  Send,
-  Map,
-  Mail,
-  Phone
-} from 'lucide-react';
-import { Separator } from '@/components/ui/separator';
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Github, Twitter, Linkedin, Send, Map, Mail, Phone } from 'lucide-react'
+import { Separator } from '@/components/ui/separator'
 
 export function Footer() {
   return (
@@ -44,22 +36,34 @@ export function Footer() {
             <h3 className="font-semibold mb-4">快速链接</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link
+                  href="/about"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   关于我们
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link
+                  href="/blog"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   技术博客
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link
+                  href="/projects"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   开源项目
                 </Link>
               </li>
               <li>
-                <Link href="/events" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link
+                  href="/events"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   社区活动
                 </Link>
               </li>
@@ -86,9 +90,7 @@ export function Footer() {
 
           <div>
             <h3 className="font-semibold mb-4">订阅更新</h3>
-            <p className="text-muted-foreground mb-4">
-              订阅我们的周刊，获取最新技术资讯
-            </p>
+            <p className="text-muted-foreground mb-4">订阅我们的周刊，获取最新技术资讯</p>
             <div className="flex gap-2">
               <Input placeholder="输入你的邮箱" />
               <Button size="icon">
@@ -101,9 +103,7 @@ export function Footer() {
         <Separator className="my-8" />
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
-            © 2024 GeekClub. All rights reserved.
-          </p>
+          <p className="text-sm text-muted-foreground">© 2024 GeekClub. All rights reserved.</p>
           <div className="flex gap-4 text-sm text-muted-foreground">
             <Link href="/privacy" className="hover:text-primary transition-colors">
               隐私政策
@@ -115,5 +115,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

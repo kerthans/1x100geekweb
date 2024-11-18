@@ -1,12 +1,12 @@
-'use client';
+'use client'
 
-import * as React from 'react';
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Github, Terminal, Code2, BookOpen } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { ThemeToggle } from '@/components/theme-toggle';
+import * as React from 'react'
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Menu, X, Github, Terminal, Code2, BookOpen } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { ThemeToggle } from '@/components/theme-toggle'
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -15,32 +15,32 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-import { cn } from '@/lib/utils';
+} from '@/components/ui/navigation-menu'
+import { cn } from '@/lib/utils'
 
 export function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
-    setIsMounted(true);
+    setIsMounted(true)
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   if (!isMounted) {
-    return null;
+    return null
   }
 
   return (
     <motion.header
       className={cn(
-        "fixed w-full z-50 transition-all duration-300",
-        isScrolled ? "backdrop-blur-md bg-background/80 border-b" : "bg-transparent"
+        'fixed w-full z-50 transition-all duration-300',
+        isScrolled ? 'backdrop-blur-md bg-background/80 border-b' : 'bg-transparent'
       )}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -74,7 +74,7 @@ export function Navbar() {
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
-                
+
                 <NavigationMenuItem>
                   <Link href="/community" legacyBehavior passHref>
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -86,16 +86,13 @@ export function Navbar() {
             </NavigationMenu>
 
             <ThemeToggle />
-            
+
             <Button variant="default" className="bg-gradient-to-r from-primary to-blue-600">
               加入我们
             </Button>
           </div>
 
-          <button
-            className="md:hidden"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
+          <button className="md:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
@@ -135,35 +132,35 @@ export function Navbar() {
         </AnimatePresence>
       </nav>
     </motion.header>
-  );
+  )
 }
 
 const learningItems = [
   {
-    title: "教程",
-    href: "/tutorials",
-    description: "从基础到高级的编程教程",
+    title: '教程',
+    href: '/tutorials',
+    description: '从基础到高级的编程教程',
     icon: <BookOpen className="w-6 h-6" />,
   },
   {
-    title: "实战项目",
-    href: "/projects",
-    description: "真实世界的项目实践",
+    title: '实战项目',
+    href: '/projects',
+    description: '真实世界的项目实践',
     icon: <Code2 className="w-6 h-6" />,
   },
   {
-    title: "开发者工具",
-    href: "/tools",
-    description: "提高效率的开发工具",
+    title: '开发者工具',
+    href: '/tools',
+    description: '提高效率的开发工具',
     icon: <Terminal className="w-6 h-6" />,
   },
-];
+]
 
 const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a"> & {
-    icon?: React.ReactNode;
-    title: string;
+  React.ElementRef<'a'>,
+  React.ComponentPropsWithoutRef<'a'> & {
+    icon?: React.ReactNode
+    title: string
   }
 >(({ className, title, children, icon, ...props }, ref) => {
   return (
@@ -172,7 +169,7 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
             className
           )}
           {...props}
@@ -181,12 +178,10 @@ const ListItem = React.forwardRef<
             {icon}
             <div className="text-sm font-medium leading-none">{title}</div>
           </div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
         </a>
       </NavigationMenuLink>
     </li>
-  );
-});
-ListItem.displayName = "ListItem";
+  )
+})
+ListItem.displayName = 'ListItem'

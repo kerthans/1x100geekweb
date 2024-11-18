@@ -1,15 +1,11 @@
-'use client';
+'use client'
 
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Card } from '@/components/ui/card';
-import {
-  Mail,
-  MessageSquare,
-  Send,
-} from 'lucide-react';
+import { motion } from 'framer-motion'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Card } from '@/components/ui/card'
+import { Mail, MessageSquare, Send } from 'lucide-react'
 
 export function ContactSection() {
   return (
@@ -54,7 +50,8 @@ export function ContactSection() {
               <div className="mt-8">
                 <h4 className="font-medium mb-2">工作时间</h4>
                 <p className="text-muted-foreground">
-                  周一至周五: 9:00 - 18:00<br />
+                  周一至周五: 9:00 - 18:00
+                  <br />
                   周末: 10:00 - 16:00
                 </p>
               </div>
@@ -85,10 +82,7 @@ export function ContactSection() {
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium">消息内容</label>
-                  <Textarea 
-                    placeholder="请输入你想告诉我们的内容..." 
-                    className="min-h-[120px]" 
-                  />
+                  <Textarea placeholder="请输入你想告诉我们的内容..." className="min-h-[120px]" />
                 </div>
                 <Button className="w-full">
                   发送消息
@@ -100,5 +94,5 @@ export function ContactSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -1,49 +1,42 @@
-'use client';
+'use client'
 
-import { motion } from 'framer-motion';
-import { Card } from '@/components/ui/card';
-import {
-  Code2,
-  Users,
-  Rocket,
-  Layout,
-  Lightbulb,
-  Share2,
-} from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { motion } from 'framer-motion'
+import { Card } from '@/components/ui/card'
+import { Code2, Users, Rocket, Layout, Lightbulb, Share2 } from 'lucide-react'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 const features = [
   {
     icon: <Code2 className="w-10 h-10 text-indigo-500" />,
     title: '技术学习',
-    description: '提供全面的技术学习资源，从入门到精通。'
+    description: '提供全面的技术学习资源，从入门到精通。',
   },
   {
     icon: <Users className="w-10 h-10 text-blue-500" />,
     title: '社区交流',
-    description: '连接全球开发者，分享经验与见解。'
+    description: '连接全球开发者，分享经验与见解。',
   },
   {
     icon: <Rocket className="w-10 h-10 text-purple-500" />,
     title: '项目实战',
-    description: '真实项目经验，快速提升开发能力。'
+    description: '真实项目经验，快速提升开发能力。',
   },
   {
     icon: <Layout className="w-10 h-10 text-pink-500" />,
     title: '资源分享',
-    description: '优质的开发资源，助力技术成长。'
+    description: '优质的开发资源，助力技术成长。',
   },
   {
     icon: <Lightbulb className="w-10 h-10 text-yellow-500" />,
     title: '创新思维',
-    description: '激发创新思维，开拓技术视野。'
+    description: '激发创新思维，开拓技术视野。',
   },
   {
     icon: <Share2 className="w-10 h-10 text-emerald-500" />,
     title: '经验交流',
-    description: '分享成功经验，共同进步成长。'
-  }
-];
+    description: '分享成功经验，共同进步成长。',
+  },
+]
 
 export function FeaturesSection() {
   return (
@@ -57,7 +50,7 @@ export function FeaturesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            为什么选择 
+            为什么选择
             <span className="text-gradient"> GeekClub </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -145,5 +138,5 @@ export function FeaturesSection() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

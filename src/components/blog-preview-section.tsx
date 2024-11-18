@@ -1,11 +1,11 @@
-'use client';
+'use client'
 
-import { motion } from 'framer-motion';
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
-import { CalendarDays, Clock, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import { motion } from 'framer-motion'
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Badge } from '@/components/ui/badge'
+import { CalendarDays, Clock, ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 
 const blogPosts = [
   {
@@ -14,12 +14,12 @@ const blogPosts = [
     author: {
       name: 'Alex Chen',
       image: '/authors/alex.jpg',
-      initial: 'AC'
+      initial: 'AC',
     },
     category: '前端开发',
     date: '2024-02-20',
     readTime: '8 min',
-    tags: ['React', 'JavaScript', 'Web开发']
+    tags: ['React', 'JavaScript', 'Web开发'],
   },
   {
     title: 'TypeScript 5.0 完全指南',
@@ -27,12 +27,12 @@ const blogPosts = [
     author: {
       name: 'Sarah Zhang',
       image: '/authors/sarah.jpg',
-      initial: 'SZ'
+      initial: 'SZ',
     },
     category: '编程语言',
     date: '2024-02-18',
     readTime: '12 min',
-    tags: ['TypeScript', '编程语言']
+    tags: ['TypeScript', '编程语言'],
   },
   {
     title: '微服务架构实战指南',
@@ -40,14 +40,14 @@ const blogPosts = [
     author: {
       name: 'Mike Wang',
       image: '/authors/mike.jpg',
-      initial: 'MW'
+      initial: 'MW',
     },
     category: '后端开发',
     date: '2024-02-15',
     readTime: '15 min',
-    tags: ['微服务', '架构设计']
-  }
-];
+    tags: ['微服务', '架构设计'],
+  },
+]
 
 export function BlogPreviewSection() {
   return (
@@ -93,7 +93,9 @@ export function BlogPreviewSection() {
                 <CardContent className="flex-grow">
                   <div className="flex flex-wrap gap-2">
                     {post.tags.map((tag, tagIndex) => (
-                      <Badge key={tagIndex} variant="outline">{tag}</Badge>
+                      <Badge key={tagIndex} variant="outline">
+                        {tag}
+                      </Badge>
                     ))}
                   </div>
                 </CardContent>
@@ -112,8 +114,8 @@ export function BlogPreviewSection() {
                         </div>
                       </div>
                     </div>
-                    <Link 
-                      href="#" 
+                    <Link
+                      href="#"
                       className="text-sm font-medium flex items-center hover:text-primary transition-colors"
                     >
                       阅读更多
@@ -133,8 +135,8 @@ export function BlogPreviewSection() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <Link 
-            href="/blog" 
+          <Link
+            href="/blog"
             className="inline-flex items-center text-lg font-medium hover:text-primary transition-colors"
           >
             查看所有文章
@@ -143,5 +145,5 @@ export function BlogPreviewSection() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }
