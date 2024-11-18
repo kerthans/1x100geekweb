@@ -7,7 +7,7 @@ import { BlogPreviewSection } from '@/components/blog-preview-section'
 import { TestimonialsSection } from '@/components/testimonials-section'
 import { CTASection } from '@/components/cta-section'
 import { ContactSection } from '@/components/contact-section'
-import { Footer } from '@/components/footer'
+// import { Footer } from '@/components/footer'
 
 export default function HomePage() {
   return (
@@ -19,7 +19,7 @@ export default function HomePage() {
       <TestimonialsSection />
       <CTASection />
       <ContactSection />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   )
 }
