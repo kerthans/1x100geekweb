@@ -9,20 +9,17 @@ const nextConfig = {
     unoptimized: true,
     domains: [],
   },
-  // 移除 NODE_ENV
   typescript: {
     ignoreBuildErrors: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
   },
-  webpack: (config, { isServer }) => {
-    // 添加路径别名
+  webpack: (config) => {
     config.resolve.alias = {
-      ...config.resolve.alias, // 确保保留现有的别名
-      '@': path.join(__dirname, 'src'), // 设置 '@' 别名指向 'src' 目录
+      ...config.resolve.alias,
+      '@': path.resolve(__dirname, './src'), // 使用 path.resolve 更加安全
     };
-
     return config;
   },
 };

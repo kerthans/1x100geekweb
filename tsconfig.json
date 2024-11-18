@@ -8,27 +8,15 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node", // 修改为 node，确保模块解析兼容 Next.js
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/components/*": ["src/components/*"],
-      "@/lib/*": ["src/lib/*"],
-      "@/styles/*": ["src/styles/*"],
-      "@/types/*": ["src/types/*"],
-      "@/utils/*": ["src/utils/*"],
-      "@/hooks/*": ["src/hooks/*"],
-      "@/providers/*": ["src/providers/*"]
-    },
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+      "@/*": ["src/*"] // 简化路径别名，避免冗余
+    }
   },
   "include": [
     "next-env.d.ts",
@@ -39,6 +27,5 @@
     "next.config.js",
     "postcss.config.js"
   ],
-  "exclude": ["node_modules"],
-  "typeRoots": ["./node_modules/@types", "./src/types"]
+  "exclude": ["node_modules"]
 }
