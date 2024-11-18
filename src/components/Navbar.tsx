@@ -18,7 +18,7 @@ import {
 } from '@/components/ui/navigation-menu'
 import { cn } from '@/lib/utils'
 
-export function Navbar() {
+export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
   const [isMounted, setIsMounted] = useState(false)
