@@ -1,3 +1,5 @@
+const path = require('path');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -5,15 +7,24 @@ const nextConfig = {
   transpilePackages: ['next-themes'],
   images: {
     unoptimized: true,
-    domains: []
+    domains: [],
   },
   // 移除 NODE_ENV
   typescript: {
-    ignoreBuildErrors: true
+    ignoreBuildErrors: true,
   },
   eslint: {
-    ignoreDuringBuilds: true
-  }
-}
+    ignoreDuringBuilds: true,
+  },
+  webpack: (config, { isServer }) => {
+    // 添加路径别名
+    config.resolve.alias = {
+      ...config.resolve.alias, // 确保保留现有的别名
+      '@': path.join(__dirname, 'src'), // 设置 '@' 别名指向 'src' 目录
+    };
 
-module.exports = nextConfig
+    return config;
+  },
+};
+
+module.exports = nextConfig;
