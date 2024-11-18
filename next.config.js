@@ -27,7 +27,7 @@ const nextConfig = {
   },
   env: {
     // 环境变量
-    NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
+    NODE_ENV: process.env.NODE_ENV
   },
   poweredByHeader: false, // 移除 X-Powered-By header
   compress: true, // 启用 gzip 压缩
