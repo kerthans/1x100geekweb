@@ -35,15 +35,15 @@ export function ContactSection() {
             viewport={{ once: true }}
           >
             <Card className="glass-morphism p-6 h-full">
-              <h3 className="text-xl font-semibold mb-4">快速联系</h3>
+              <h3 className="text-xl font-semibold mb-4">快来添加小助手微信进入社群交流吧！</h3>
               <div className="space-y-4">
-                <div className="flex items-center gap-3">
+                {/* <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-primary" />
                   <p className="text-muted-foreground">contact@geekclub.com</p>
-                </div>
+                </div> */}
                 <div className="flex items-center gap-3">
                   <MessageSquare className="h-5 w-5 text-primary" />
-                  <p className="text-muted-foreground">微信公众号：GeekClub</p>
+                  <p className="text-muted-foreground">小助手微信：yink12138</p>
                 </div>
               </div>
 

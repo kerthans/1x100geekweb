@@ -74,8 +74,8 @@ export function HeroSection() {
           >
             <div className="glass-morphism rounded-xl p-6 hover-card-animation">
               <Terminal className="h-8 w-8 mb-4 text-indigo-500" />
-              <h3 className="text-lg font-semibold mb-2">开发者优先</h3>
-              <p className="text-muted-foreground">以开发者体验为核心，提供最佳实践</p>
+              <h3 className="text-lg font-semibold mb-2">项目围观</h3>
+              <p className="text-muted-foreground">从零到一观摩，手把手带你详拆技术细节</p>
             </div>
             <div className="glass-morphism rounded-xl p-6 hover-card-animation">
               <Code2 className="h-8 w-8 mb-4 text-blue-500" />
@@ -85,7 +85,7 @@ export function HeroSection() {
             <div className="glass-morphism rounded-xl p-6 hover-card-animation">
               <Laptop className="h-8 w-8 mb-4 text-purple-500" />
               <h3 className="text-lg font-semibold mb-2">实践导向</h3>
-              <p className="text-muted-foreground">注重实战项目，加速成长进阶</p>
+              <p className="text-muted-foreground">注重实战项目，提供最佳实践</p>
             </div>
           </motion.div>
         </div>

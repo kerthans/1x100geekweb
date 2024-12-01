@@ -48,7 +48,12 @@
     --ring: 240 4.9% 83.9%;
   }
 }
-
+@layer utilities {
+  .backdrop-blur-xl {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+}
 @layer base {
   * {
     @apply border-border;
