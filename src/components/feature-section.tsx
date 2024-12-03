@@ -14,7 +14,7 @@ const features = [
   {
     icon: <Users className="w-10 h-10 text-blue-500" />,
     title: '社区交流',
-    description: '连接全球开发者，分享经验与见解。',
+    description: '连接各领域开发者，分享经验与见解。',
   },
   {
     icon: <Rocket className="w-10 h-10 text-purple-500" />,

@@ -4,6 +4,8 @@ import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { Terminal, Code2, Laptop, ArrowRight, Sparkles } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
+import Link from 'next/link'
+
 
 export function HeroSection() {
   return (
@@ -57,13 +59,17 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <Button size="lg" className="group">
-              开始探索
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button size="lg" variant="outline">
-              了解更多
-            </Button>
+            <Link href="/tutorials">
+              <Button size="lg" className="group">
+                开始探索
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
+            <Link href="/about">
+              <Button size="lg" variant="outline">
+                了解更多
+              </Button>
+            </Link>
           </motion.div>
 
           <motion.div

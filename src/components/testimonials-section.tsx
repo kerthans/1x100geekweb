@@ -8,32 +8,32 @@ import { Quote } from 'lucide-react'
 const testimonials = [
   {
     content:
-      'GeekClub不仅提供了优质的学习资源，更重要的是这里有一群热爱技术的伙伴。通过社区交流，我的技术水平得到了显著提升。',
+      'GeekClub不仅提供了优质的学习资源，更重要的是这里有一群热爱技术的伙伴。我们经常组队线下Hackthon！真的太难忘了。',
     author: {
-      name: '张明',
+      name: 'Clint',
       role: '全栈开发工程师',
       image: '/testimonials/user1.jpg',
-      initial: 'ZM',
+      initial: 'Cl',
     },
   },
   {
     content:
-      '作为一名前端开发者，在GeekClub找到了很多实用的技术分享和最佳实践。这里的学习氛围很棒，社区成员都很友善。',
+      '作为一名UI美术的同学，在GeekClub找到了很多实用的技术分享和最佳实践，这里有前沿的AI和分享，即便是非技术的同学也能学到特别多。这里的学习氛围很棒，社区成员都很友善。',
     author: {
-      name: '李华',
-      role: '前端开发工程师',
+      name: '豫淮',
+      role: 'UI美术',
       image: '/testimonials/user2.jpg',
-      initial: 'LH',
+      initial: 'YH',
     },
   },
   {
     content:
-      '加入GeekClub是我职业生涯中最正确的决定之一。这里的导师和社区成员都非常专业，帮助我快速成长。',
+      '加入GeekClub是我学习生涯中最正确的决定之一。这里的同学和社区成员都非常专业，帮助我快速成长。我们一起参与了很多次社区办的活动，我落地和制作了我属于我自己的网页，大家都很耐心的解答我遇到的报错，太暖啦！',
     author: {
-      name: '王芳',
-      role: '后端开发工程师',
+      name: '苏琪Joy',
+      role: '金融投资领域从业者',
       image: '/testimonials/user3.jpg',
-      initial: 'WF',
+      initial: 'SQ',
     },
   },
 ]

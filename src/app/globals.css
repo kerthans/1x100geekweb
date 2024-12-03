@@ -107,7 +107,7 @@
   -webkit-text-fill-color: transparent;
 }
 .text-gradient-logo {
-  background: linear-gradient(to right, #4f46e5, #0ea5e9);
+  background: linear-gradient(to right, #4f46e5, #0c90ce);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -121,3 +121,4 @@
 .hover-card-animation {
   @apply transition-all duration-300 hover:scale-105;
 }
+

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Github, Twitter, Linkedin, Send, Map, Mail, Phone } from 'lucide-react'
+import { Github, Twitter, Linkedin, Send, Mail, Phone  } from 'lucide-react'
 import { Separator } from '@/components/ui/separator'
 
 const fadeInUpVariants = {
@@ -75,10 +75,10 @@ export function Foot() {
           <motion.div variants={fadeInUpVariants}>
             <h3 className="font-semibold mb-4">联系我们</h3>
             <ul className="space-y-2">
-              <li className="flex items-center text-muted-foreground group hover:text-primary transition-colors">
+              {/* <li className="flex items-center text-muted-foreground group hover:text-primary transition-colors">
                 <Map className="h-4 w-4 mr-2 group-hover:scale-110 transition-transform" />
                 北京市海淀区中关村
-              </li>
+              </li> */}
               <li className="flex items-center text-muted-foreground group hover:text-primary transition-colors">
                 <Mail className="h-4 w-4 mr-2 group-hover:scale-110 transition-transform" />
                 contact@geekclub.com
