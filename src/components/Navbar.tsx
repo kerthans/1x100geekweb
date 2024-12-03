@@ -175,7 +175,7 @@ export function Header() {
             <Link href={CONFIG.brand.href} className="text-2xl font-bold relative group">
               <span
                 className={cn(
-                  'bg-gradient-to-r bg-clip-text text-transparent',
+                  'text-gradient-logo',
                   CONFIG.brand.gradientFrom,
                   CONFIG.brand.gradientTo
                 )}
