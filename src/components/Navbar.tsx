@@ -24,7 +24,7 @@ const CONFIG = {
     name: 'GeekClub',
     href: '/',
     gradientFrom: 'from-primary',
-    gradientTo: 'to-blue-600'
+    gradientTo: 'to-blue-600',
   },
   sections: {
     hero: '#hero',
@@ -32,7 +32,7 @@ const CONFIG = {
     blog: '#blog',
     testimonials: '#testimonials',
     cta: '#cta',
-    contact: '#contact'
+    contact: '#contact',
   },
   styles: {
     glassEffect: 'backdrop-blur-xl bg-white/30 dark:bg-gray-950/30',
@@ -40,22 +40,22 @@ const CONFIG = {
     spacing: 'mx-4 my-2',
     shadow: 'shadow-lg',
     rounded: 'rounded-2xl',
-    border: 'border border-white/20 dark:border-gray-800/20'
+    border: 'border border-white/20 dark:border-gray-800/20',
   },
   animation: {
     duration: 0.2,
     headerMotion: {
       initial: { y: -20, opacity: 0 },
       animate: { y: 0, opacity: 1 },
-      transition: { duration: 0.3 }
+      transition: { duration: 0.3 },
     },
     menuMotion: {
       initial: { opacity: 0, scale: 0.95 },
       animate: { opacity: 1, scale: 1 },
       exit: { opacity: 0, scale: 0.95 },
-      transition: { duration: 0.2 }
-    }
-  }
+      transition: { duration: 0.2 },
+    },
+  },
 }
 
 const navigationItems = [
@@ -67,27 +67,27 @@ const navigationItems = [
         title: '教程资源',
         href: '/tutorials',
         description: '全面的编程学习指南',
-        icon: <BookOpen className="h-6 w-6" />
+        icon: <BookOpen className="h-6 w-6" />,
       },
       {
         title: '实战项目',
         href: '/projects',
         description: '真实项目开发经验',
-        icon: <Code2 className="h-6 w-6" />
+        icon: <Code2 className="h-6 w-6" />,
       },
       {
         title: '开发工具',
         href: '/tools',
         description: '提升开发效率的工具集',
-        icon: <Terminal className="h-6 w-6" />
-      }
-    ]
+        icon: <Terminal className="h-6 w-6" />,
+      },
+    ],
   },
   {
     title: '社区',
     type: 'link',
-    href: '/community'
-  }
+    href: '/community',
+  },
 ]
 
 const ListItem = React.forwardRef<
@@ -107,7 +107,8 @@ const ListItem = React.forwardRef<
           CONFIG.styles.hoverEffect,
           className
         )}
-        {...props}>
+        {...props}
+      >
         <div className="flex items-center gap-2">
           {icon}
           <span className="text-sm font-medium">{title}</span>
@@ -127,7 +128,8 @@ export function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY
-      const winHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+      const winHeight =
+        document.documentElement.scrollHeight - document.documentElement.clientHeight
       setIsScrolled(scrollY > 20)
       setScrollProgress((scrollY / winHeight) * 100)
     }
@@ -153,8 +155,8 @@ export function Header() {
         style={{ transformOrigin: '0%' }}
         initial={{ scaleX: 0 }}
         animate={{ scaleX: scrollProgress / 100 }}
-        transition={{ duration: 0.1 }} />
-      
+        transition={{ duration: 0.1 }}
+      />
       <motion.header
         className={cn(
           'fixed top-0 left-0 right-0 z-40 transition-all',
@@ -166,15 +168,20 @@ export function Header() {
             CONFIG.styles.border
           ]
         )}
-        {...CONFIG.animation.headerMotion}>
+        {...CONFIG.animation.headerMotion}
+      >
         <nav className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <Link href={CONFIG.brand.href} className="text-2xl font-bold relative group">
-              <span className={cn(
-                'bg-gradient-to-r bg-clip-text text-transparent',
-                CONFIG.brand.gradientFrom,
-                CONFIG.brand.gradientTo
-              )}>{CONFIG.brand.name}</span>
+              <span
+                className={cn(
+                  'bg-gradient-to-r bg-clip-text text-transparent',
+                  CONFIG.brand.gradientFrom,
+                  CONFIG.brand.gradientTo
+                )}
+              >
+                {CONFIG.brand.name}
+              </span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
             </Link>
 
@@ -220,7 +227,8 @@ export function Header() {
                   CONFIG.brand.gradientFrom,
                   CONFIG.brand.gradientTo
                 )}
-                onClick={() => scrollToSection(CONFIG.sections.contact)}>
+                onClick={() => scrollToSection(CONFIG.sections.contact)}
+              >
                 加入我们
               </Button>
             </div>
@@ -228,23 +236,24 @@ export function Header() {
             <button
               className="md:hidden p-2 hover:bg-accent rounded-lg transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label={isMobileMenuOpen ? '关闭菜单' : '打开菜单'}>
+              aria-label={isMobileMenuOpen ? '关闭菜单' : '打开菜单'}
+            >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
 
           <AnimatePresence mode="wait">
             {isMobileMenuOpen && (
-              <motion.div
-                className="md:hidden mt-4"
-                {...CONFIG.animation.menuMotion}>
-                <div className={cn(
-                  'p-4',
-                  CONFIG.styles.glassEffect,
-                  CONFIG.styles.rounded,
-                  CONFIG.styles.border,
-                  CONFIG.styles.shadow
-                )}>
+              <motion.div className="md:hidden mt-4" {...CONFIG.animation.menuMotion}>
+                <div
+                  className={cn(
+                    'p-4',
+                    CONFIG.styles.glassEffect,
+                    CONFIG.styles.rounded,
+                    CONFIG.styles.border,
+                    CONFIG.styles.shadow
+                  )}
+                >
                   <div className="flex flex-col space-y-3">
                     {Object.entries(CONFIG.sections).map(([key, value]) => (
                       <button
